@@ -9,29 +9,29 @@ const resultText = document.getElementById("result-text");
 
 //pilih berdasarkan kelompok yang dipilih
 let options = {
-  fruits: [
-    "Plum",
-    "Avocado",
-    "Persimmon",
-    "Guava",
-    "Pomegranate",
-    "Watermelon",
+  buah: [
+    "Pisang",
+    "Apel",
+    "Jeruk",
+    "Semangka",
+    "Durian",
+    "Anggur",
   ],
-  animals: [
-    "Hedgehog",
-    "Rhinoceros",
-    "Squirrel",
-    "Tiger",
-    "Giraffe",
-    "Butterfly",
+  hewan: [
+    "Landak",
+    "Anjing",
+    "Babi",
+    "Gajah",
+    "Kucing",
+    "Capung",
   ],
-  countries: [
+  negara: [
     "Indonesia",
-    "Mexico",
-    "Singapore",
-    "Switzerland",
+    "Guatemala",
+    "Australia",
+    "Oman",
     "Zimbabwe",
-    "France",
+    "Peru",
   ],
 };
 
@@ -131,7 +131,7 @@ const initializer = () => {
                 winCount += 1;
                 //if winCount sama dengan panjang kata
                 if (winCount === charArray.length) {
-                  resultText.innerHTML = `<h2 class='win-msg'>Yeayyy Congrats!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+                  resultText.innerHTML = `<h2 class='win-msg'>Anjayy, keren lu!!</h2><p>Jawabannya <span>${chosenWord}</span></p>`;
                   //block semua tombol
                   blocker();
                 }
@@ -146,7 +146,7 @@ const initializer = () => {
             drawMan(count);
             //Count == 6 karena terdiri dari kepala,badan, tangan kiri, tangan kanan, kaki kiri, kaki kanan
             if (count === 6) {
-              resultText.innerHTML = `<h2 class='lose-msg'>OOW Try Again!!</h2><p>The word was <span>${chosenWord}</span></p>`;
+              resultText.innerHTML = `<h2 class='lose-msg'>Yaaahh, salahh!!</h2><p>Jawabannya <span>${chosenWord}</span></p>`;
               blocker();
             }
           }
